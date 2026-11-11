@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "status": "approved visual placement and scale",
+  "canvas": {
+    "width": 1671,
+    "height": 941
+  },
+  "reference16HeightPx": {
+    "left": 221,
+    "right": 265
+  },
+  "rotationDeg": {
+    "left": 0,
+    "right": 0
+  },
+  "positions": {
+    "left": {
+      "x": 923,
+      "y": 345
+    },
+    "right": {
+      "x": 1517,
+      "y": 292
+    }
+  },
+  "firebox": {
+    "x": 993,
+    "y": 423,
+    "width": 453,
+    "height": 416
+  },
+  "sizeRatios": {
+    "10": 0.625,
+    "12": 0.75,
+    "14": 0.875,
+    "16": 1
+  },
+  "assets": {
+    "background": "Blank Fireplace for Corbel Overlay.png",
+    "corbel": "Ornate Carved Lion Corbel Bracket Overlay.png"
+  },
+  "orientation": {
+    "left": "original",
+    "right": "original"
+  }
+}

@@ -78,3 +78,135 @@
 /* Blue backing beneath the sculpted plan edge: transparent SVG valleys reveal the next section. */
 #wcd .plan::before{content:"";position:absolute;left:calc((100vw - 100%)/-2);width:100vw;height:70px;bottom:-34px;background:#e8eff5;z-index:0;pointer-events:none}
 @media(max-width:700px){#wcd .plan::before{height:42px;bottom:-21px}}
+/* Client copy and collection browsing additions. */
+#wcd .hero h1{font-size:clamp(42px,4.75vw,72px);max-width:760px}
+#wcd .hero-copy>p:not(.eyebrow){max-width:570px}
+#wcd .hero-slide-controls button{font-size:13px}
+#wcd .collection .section-heading>p,#wcd .plan .section-heading>p{max-width:540px;font-size:15px;line-height:1.65}
+#wcd .collection-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+#wcd .collection-card{min-width:0}
+#wcd .collection-card .card-image{display:block;background:#e8e5dd}
+#wcd .collection-card .card-image img{height:300px;object-fit:contain}
+#wcd .collection-card .card-caption{min-height:190px}
+#wcd .collection-card .card-caption p{font-size:13px;line-height:1.55}
+#wcd .collection-card .text-link{margin-top:9px}
+#wcd .collection-controls{display:none}
+#wcd .inspiration-copy h2{max-width:650px}
+#wcd .vision{display:grid;grid-template-columns:1fr 1.35fr;gap:40px 8%;padding:90px 0 100px}
+#wcd .vision>div:first-child>p:last-child{margin-top:25px;color:var(--muted)}
+#wcd .benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+#wcd .benefits article{border-top:1px solid var(--line);padding-top:18px}
+#wcd .benefits h3{font-size:23px}
+#wcd .benefits p{font-size:13px;color:var(--muted);margin-top:9px}
+#wcd .vision-close{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:28px;border-top:1px solid var(--line);padding-top:25px}
+#wcd .vision-close p{max-width:700px;color:var(--muted)}
+#wcd .plan{padding-top:68px;padding-bottom:65px}
+#wcd .sizing-guide{grid-template-columns:1fr 1.2fr;gap:45px 6%;padding-top:75px}
+#wcd .sizing-copy>p:not(.eyebrow){max-width:550px}
+#wcd .guide-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+#wcd .guide-actions .secondary-button{background:transparent;color:var(--ink);border-color:var(--ink)}
+#wcd .guide-scene{margin:0;min-width:0;display:grid;grid-template-columns:1.5fr 1fr;gap:12px;align-items:stretch}
+#wcd .guide-context{width:100%;height:360px;object-fit:cover;border-radius:3px}
+#wcd .guide-product{background:#e8e2d7;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:12px;text-align:center}
+#wcd .guide-product img{height:250px;width:100%;object-fit:contain;transition:transform .2s}
+#wcd .guide-product img.guide-size-0{transform:scale(.65)}
+#wcd .guide-product img.guide-size-1{transform:scale(.84)}
+#wcd .guide-product img.guide-size-2{transform:scale(1)}
+#wcd .scene-label{font:14px var(--serif);padding-top:9px}
+#wcd .guide-scene figcaption{grid-column:1/-1;font-size:11px;margin-top:0}
+#wcd .guide-steps{grid-column:1/-1;margin-top:14px}
+#wcd .faq>div>p:last-child{max-width:450px;font-size:14px}
+#wcd .final-cta>p:not(.eyebrow){max-width:650px;margin:15px auto;color:var(--muted)}
+#wcd .footer-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+#wcd .footer-top>div{min-width:0}
+#wcd .footer-top address{font-style:normal;margin:10px 0}
+#wcd .footer-top a[href^="tel"]{display:inline-block;padding:5px 0}
+#wcd .footer-top .ipc-logo{width:130px;max-height:90px;object-fit:contain;object-position:left center;background:#fff;padding:7px}
+#wcd .footer-top span{font-size:12px}
+#wcd .footer-disclaimer{font-size:11px;line-height:1.5;max-width:800px;margin:0 0 24px;color:#d2d4df}
+#wcd .browse-main{padding:65px 0 100px;min-height:60vh}
+#wcd .browse-main h1{font-size:clamp(42px,5vw,68px);max-width:900px}
+#wcd .browse-main h2{font-size:38px}
+#wcd .browse-intro{max-width:760px;color:var(--muted);margin:22px 0 30px}
+#wcd .browse-main .button{margin:25px 0 10px}
+#wcd .breadcrumbs{display:flex;gap:12px;align-items:center;font-size:12px;margin-bottom:38px;color:var(--muted)}
+#wcd .breadcrumbs a:hover{color:var(--ink);text-decoration:underline}
+#wcd .category-nav{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0}
+#wcd .category-nav a{font-family:var(--serif);border:1px solid #cfc6b6;padding:9px 15px;min-height:44px;display:inline-flex;align-items:center}
+#wcd .category-nav a:hover{background:var(--ink);color:#fff}
+#wcd .browse-categories,#wcd .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+#wcd .browse-categories>a,#wcd .product-card{display:block;min-width:0;border-bottom:1px solid var(--line);padding-bottom:18px}
+#wcd .browse-categories img,#wcd .product-card>img{width:100%;height:290px;object-fit:contain;background:#e9e5dd}
+#wcd .browse-categories a>span,#wcd .product-card-copy{display:block;padding-top:15px}
+#wcd .browse-categories strong,#wcd .product-card strong{display:block;font:24px/1.25 var(--serif)}
+#wcd .browse-categories small{display:block;color:var(--muted);font-size:13px;line-height:1.5;margin-top:8px}
+#wcd .browse-categories .text-link,#wcd .product-card .text-link{margin-top:10px}
+#wcd .product-card .eyebrow{display:block;margin:0 0 5px}
+#wcd .product-detail{display:grid;grid-template-columns:1.15fr 1fr;gap:8%;align-items:start}
+#wcd .product-main-image{width:100%;height:540px;object-fit:contain;background:#e9e5dd}
+#wcd .product-thumbs{display:flex;gap:10px;margin-top:12px;overflow:auto}
+#wcd .product-thumbs button{border:2px solid transparent;background:#e9e5dd;padding:3px;flex:0 0 90px;height:90px}
+#wcd .product-thumbs button[aria-pressed="true"]{border-color:#8b682d}
+#wcd .product-thumbs img{width:100%;height:100%;object-fit:contain}
+#wcd .product-description>p:not(.eyebrow){color:var(--muted);margin:25px 0;max-width:460px}
+#wcd .related-products{margin-top:90px}
+#wcd .related-products .product-grid{margin-top:25px}
+#wcd .prototype-note{font-size:12px;color:var(--muted);margin-top:30px}
+@media(max-width:1000px){#wcd .collection-grid,#wcd .browse-categories,#wcd .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#wcd .vision{grid-template-columns:1fr;gap:30px}#wcd .guide-scene{grid-template-columns:1fr 1fr}#wcd .guide-context{height:300px}#wcd .guide-product img{height:210px}#wcd .product-main-image{height:440px}}
+@media(max-width:700px){#wcd .hero h1{font-size:clamp(39px,9vw,58px)}#wcd .collection .section-heading>p,#wcd .plan .section-heading>p{font-size:13px}#wcd .collection-controls{display:flex;justify-content:flex-end;gap:8px;margin:-7px 0 10px}#wcd .collection-controls button{border:1px solid var(--line);background:transparent;color:var(--ink);width:44px;height:44px}#wcd .collection-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;gap:15px;padding-bottom:8px}#wcd .collection-card{flex:0 0 79%;scroll-snap-align:start}#wcd .collection-card .card-image img{height:235px}#wcd .collection-card .card-caption{min-height:0}#wcd .vision{padding:55px 0 65px}#wcd .benefits{gap:14px}#wcd .benefits h3{font-size:19px}#wcd .benefits p{font-size:12px}#wcd .vision-close{display:block}#wcd .vision-close .button{margin-top:18px}#wcd .plan{padding:45px 0 50px}#wcd .sizing-guide{padding:48px 0 55px}#wcd .guide-context{height:220px}#wcd .guide-product img{height:155px}#wcd .guide-scene figcaption{font-size:10px}#wcd .guide-steps{grid-template-columns:1fr;gap:12px}#wcd .guide-steps article{padding-top:10px}#wcd .guide-steps h3{margin:5px 0}#wcd .faq{padding-top:35px}#wcd .footer-top{grid-template-columns:1fr 1fr;gap:20px}#wcd .footer-top>div:last-child{grid-column:1/-1;display:flex;gap:15px;align-items:center}#wcd .footer-top .ipc-logo{width:90px}#wcd .footer-top>div:last-child p{margin:0!important}#wcd .footer-top>div:last-child span{display:none}#wcd .footer-disclaimer{font-size:10px}#wcd .footer-bottom{align-items:start}#wcd .browse-main{padding:35px 0 60px}#wcd .browse-categories,#wcd .product-grid{gap:16px}#wcd .browse-categories img,#wcd .product-card>img{height:180px}#wcd .browse-categories strong,#wcd .product-card strong{font-size:19px}#wcd .browse-categories small{font-size:11px}#wcd .product-detail{grid-template-columns:1fr;gap:25px}#wcd .product-main-image{height:340px}#wcd .related-products{margin-top:55px}}
+@media(max-width:400px){#wcd .guide-scene{grid-template-columns:1fr 1fr}#wcd .guide-context{height:180px}#wcd .guide-product img{height:120px}#wcd .footer-top{gap:12px}#wcd .footer-top .footer-logo{width:80px}#wcd .footer-bottom{display:block}#wcd .footer-bottom span{display:block;max-width:none;margin-top:8px}}
+@media(max-width:700px){#wcd .sizing-guide{grid-template-columns:minmax(0,1fr)}#wcd .guide-scene{width:100%;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}#wcd .footer-top>div:last-child span{display:inline;font-size:10px}}
+#wcd .product-gallery,#wcd .product-description{min-width:0}
+#wcd .product-thumbs{max-width:100%}
+#wcd footer .more-products{display:inline-block;border-bottom:1px solid #bfa679;font-size:12px;margin-top:12px;line-height:1.4;padding-bottom:4px}
+@media(max-width:700px){#wcd .footer-top>div:last-child{display:grid;grid-template-columns:90px minmax(0,1fr)}#wcd .footer-top>div:last-child .more-products{grid-column:1/-1;margin-top:0}}
+/* Focused navigation correction. */
+#wcd header #navigation .nav-shop{display:flex;align-items:center;position:relative}
+#wcd header #navigation .nav-shop>a{padding-right:4px}
+#wcd header #navigation .shop-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;color:var(--ink);font-size:24px;line-height:1}
+#wcd header #navigation .shop-toggle[aria-expanded="true"] span{transform:rotate(180deg)}
+#wcd header #navigation .shop-submenu{display:none;position:absolute;top:100%;left:0;min-width:185px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 22px rgba(48,52,93,.12);padding:7px;z-index:40}
+#wcd header #navigation .nav-shop.open .shop-submenu{display:grid}
+#wcd header #navigation .shop-submenu a{display:flex;align-items:center;padding:8px 12px;min-height:44px;white-space:nowrap}
+#wcd header #navigation .shop-submenu a:hover{background:#f1eadc}
+@media(max-width:700px){#wcd header #navigation .nav-shop{grid-column:1/-1;display:grid;grid-template-columns:1fr 44px;border-bottom:1px solid var(--line)}#wcd header #navigation .nav-shop>a{min-height:44px;display:flex;align-items:center}#wcd header #navigation .shop-submenu{position:static;grid-column:1/-1;grid-template-columns:1fr 1fr;min-width:0;border:0;box-shadow:none;background:#f7f4ed;padding:0 4px 8px}#wcd header #navigation .shop-submenu a{white-space:normal}}
+/* Proportion finder reference and scene. */
+#wcd .guide-example-label{font:20px/1.35 var(--serif);color:var(--ink)!important;margin-top:24px!important}
+#wcd .guide-reference{margin:20px 0 10px;border-top:1px solid var(--line)}
+#wcd .guide-reference summary{font-family:var(--serif);font-size:16px}
+#wcd .guide-reference img{width:100%;height:auto;background:#fff;margin-bottom:16px}
+#wcd .guide-scene{display:block}
+#wcd .guide-context{width:100%;height:auto;object-fit:cover;border-radius:3px}
+#wcd .guide-scene figcaption{display:block;margin-top:10px;line-height:1.5}
+@media(max-width:700px){#wcd .guide-example-label{font-size:18px}#wcd .guide-reference{margin-top:14px}}
+#wcd .sizing-copy>p.guide-example-label{font:20px/1.35 var(--serif);color:var(--ink);margin-top:24px}
+@media(max-width:700px){#wcd .sizing-copy>p.guide-example-label{font-size:18px;margin-top:16px}}
+
+/* First-pass lion corbel proportion comparison. */
+#wcd .guide-height-controls{margin:18px 0 8px}
+#wcd .guide-height-controls>span{display:block;font:14px/1.4 var(--serif);color:var(--ink);margin-bottom:8px}
+#wcd .guide-height-buttons{display:flex;flex-wrap:wrap;gap:8px}
+#wcd .guide-height-buttons button{min-width:58px;min-height:44px;padding:8px 12px;border:1px solid var(--ink);border-radius:2px;background:transparent;color:var(--ink);font-family:inherit;font-size:13px;line-height:1.2;cursor:pointer}
+#wcd .guide-height-buttons button[aria-pressed="true"]{background:var(--ink);color:#fff}
+#wcd .guide-height-buttons button:focus-visible{outline:3px solid #2868a3;outline-offset:2px}
+#wcd .guide-current-size{font-size:12px!important;margin:9px 0 0!important;color:var(--muted)}
+#wcd .guide-stage{overflow:hidden;border-radius:3px}
+#wcd .guide-composite{position:relative;width:100%;line-height:0}
+#wcd .guide-context{display:block;width:100%;height:auto;border-radius:0}
+#wcd .guide-corbel{position:absolute;width:auto;max-width:none;pointer-events:none;transition:height .25s ease}
+#wcd .guide-corbel-left{left:var(--left-x);top:var(--left-y);height:var(--left-height);transform:translateX(-50%) rotate(var(--left-rotation))}
+#wcd .guide-corbel-right{left:var(--right-x);top:var(--right-y);height:var(--right-height);transform:translateX(-50%) rotate(var(--right-rotation))}
+@media(max-width:700px){#wcd .guide-composite{width:100%;margin-left:0}}
+@media(prefers-reduced-motion:reduce){#wcd .guide-corbel{transition:none}}
+
+#wcd .hero-art .hero-slide img{width:100%;height:100%;border-radius:0;object-fit:cover}
+#wcd .hero-slide:not(.is-active){pointer-events:none}
+
+#wcd .hero-slides{aspect-ratio:4/3;height:auto}
+#wcd header #navigation .shop-toggle{display:none}
+@media(min-width:701px){#wcd header #navigation .nav-shop:hover .shop-submenu,#wcd header #navigation .nav-shop:focus-within .shop-submenu{display:grid}#wcd .footer-top>div:last-child{text-align:right}#wcd .footer-top>div:last-child .ipc-logo{margin-left:auto}}
+@media(max-width:700px){#wcd header #navigation.open .shop-submenu{display:grid}#wcd header #navigation .nav-shop{grid-template-columns:1fr}}
+@media(min-width:1001px){#wcd .collection-grid{grid-template-columns:repeat(6,minmax(0,1fr))}#wcd .collection-card{grid-column:span 2}#wcd .collection-card:nth-child(4){grid-column:2 / span 2}}
+
+#wcd .collection .section-heading .text-link{display:inline;padding:0;font-size:inherit}
+#wcd .footer-top>div:nth-child(2){text-align:center}

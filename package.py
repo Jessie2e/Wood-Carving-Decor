@@ -3,10 +3,13 @@ import shutil,re,zipfile
 root=Path.cwd(); dest=root/'wordpress/wood-carving-decor-home'; dest.mkdir(parents=True,exist_ok=True)
 css=Path('style.css').read_text().replace('body{margin:0}','')
 html=Path('homepage.html').read_text().replace('<dialog id="design-preview">','<dialog id="design-preview" aria-label="Carving design preview">')
-Path('homepage.html').write_text(html); index=Path('index.html');index.write_text(index.read_text().split('<div id="wcd">', 1)[0] + html + '</body></html>')
+Path('homepage.html').write_text(html); index=Path('index.html')
+if not index.exists(): raise FileNotFoundError('index.html is a source file and must be present')
 (dest/'homepage.html').write_text(html);(dest/'style.css').write_text(css);shutil.copy2('script.js',dest/'script.js');(dest/'assets').mkdir(exist_ok=True)
 for p in Path('assets').glob('*-[0-9]*.jpg'):
  if re.match(r'^(hero|lion|capital|corbel|installed|swan|logo)-\d+\.jpg$',p.name):shutil.copy2(p,dest/'assets'/p.name)
+for name in ('Blank Fireplace for Corbel Overlay.png', 'Ornate Carved Lion Corbel Bracket Overlay.png', 'island-post-cap-wooden-lion-corbel-dimensions-front-1600-1200.jpg'):
+ shutil.copy2(Path('assets')/name,dest/'assets'/name)
 (dest/'wood-carving-decor-home.php').write_text('''<?php
 /**
  * Plugin Name: Wood Carving Decor — Homepage Concept
