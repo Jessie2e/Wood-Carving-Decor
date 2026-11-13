@@ -210,3 +210,140 @@
 
 #wcd .collection .section-heading .text-link{display:inline;padding:0;font-size:inherit}
 #wcd .footer-top>div:nth-child(2){text-align:center}
+
+/* Give the section introduction the same open rhythm as the other two-column sections. */
+#wcd .collection .section-heading{column-gap:clamp(45px,7vw,120px);align-items:start}
+#wcd .collection .section-heading>div{flex:1 1 50%;min-width:0}
+#wcd .collection .section-heading>p{flex:1 1 38%;max-width:480px;padding-top:30px}
+/* Existing supplied interior scene bridges the vision and proportion sections. */
+#wcd .editorial-scene{position:relative;width:100%;height:clamp(360px,46vw,680px);overflow:hidden;background:#ddd2c1}
+#wcd .editorial-scene img{width:100%;height:100%;object-fit:cover;object-position:center 52%}
+#wcd .editorial-scene figcaption{position:absolute;left:7%;bottom:28px;background:rgba(247,244,237,.94);padding:9px 16px;color:var(--ink);font:17px/1.2 var(--serif);letter-spacing:.4px}
+@media(max-width:1000px){#wcd .collection .section-heading>p{padding-top:18px}}
+@media(max-width:700px){#wcd .collection .section-heading>p{padding-top:0;max-width:600px}#wcd .editorial-scene{height:300px}#wcd .editorial-scene img{object-position:65% center}#wcd .editorial-scene figcaption{left:6%;bottom:14px;font-size:14px;padding:7px 11px}}
+@media(max-width:400px){#wcd .editorial-scene{height:255px}}
+#wcd .guide-category{display:block;font:14px/1.4 var(--serif);margin:20px 0;color:var(--ink)}
+#wcd .guide-category select{display:block;min-height:44px;margin-top:8px;padding:8px 12px;border:1px solid var(--ink);background:var(--ivory);color:var(--ink);font:14px Arial,sans-serif}
+#wcd .guide-corbel[hidden]{display:none}
+
+/* View in a Space uses the supplied corbel comparison alongside installed scenes. */
+#wcd .sizing-guide{display:block;padding-top:64px}
+#wcd .space-intro{max-width:850px;margin-bottom:28px}
+#wcd .space-intro>p:last-child{color:var(--muted);margin-top:15px}
+#wcd .space-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
+#wcd .space-tabs button{min-height:44px;padding:9px 17px;border:1px solid #b9c2ca;background:transparent;color:var(--ink);font:16px var(--serif);cursor:pointer}
+#wcd .space-tabs button[aria-selected="true"]{background:var(--ink);color:white;border-color:var(--ink)}
+#wcd .space-tabs button:focus-visible{outline:3px solid #2868a3;outline-offset:2px}
+#wcd .space-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px 6%;align-items:center}
+#wcd .space-panel[hidden]{display:none}
+#wcd .space-panel h3{font-size:clamp(27px,3vw,40px);line-height:1.15}
+#wcd .space-copy p{color:var(--muted);margin:16px 0 24px}
+#wcd .space-scene{margin:0;min-width:0}
+#wcd .space-scene img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+#wcd .space-scene figcaption{font-size:11px;color:var(--muted);margin-top:8px}
+#wcd .space-scene-pending{display:grid;place-items:center;min-height:300px;aspect-ratio:4/3;border:1px solid #b9c2ca;background:#f0f3f5;text-align:center;padding:28px;color:var(--muted);font:20px var(--serif)}
+#wcd .space-panel .guide-steps{grid-column:1/-1}
+#wcd .space-panel .guide-scene{grid-template-columns:minmax(0,1fr)}
+#wcd .space-panel .guide-stage{min-width:0}
+#wcd .brand img{width:130px;height:100px;object-fit:contain}
+#wcd .footer-logo img{object-fit:contain}
+#wcd .benefits-controls{display:none}
+@media(max-width:1000px){
+ #wcd .vision{grid-template-columns:1fr;gap:22px;padding:55px 0}
+ #wcd .benefits-controls{display:flex;justify-content:flex-end;gap:8px}
+ #wcd .benefits-controls button{width:44px;height:44px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:22px;cursor:pointer}
+ #wcd .benefits{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:12px;scrollbar-width:thin}
+ #wcd .benefits article{flex:0 0 min(42%,340px);scroll-snap-align:start;min-height:160px}
+ #wcd .vision-close{padding-top:18px}
+}
+@media(max-width:700px){
+ #wcd .sizing-guide{padding-top:45px}
+ #wcd .space-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding-bottom:8px;margin-bottom:20px}
+ #wcd .space-tabs button{white-space:nowrap;flex:0 0 auto}
+ #wcd .space-panel{grid-template-columns:minmax(0,1fr);gap:22px}
+ #wcd .space-panel .guide-steps{grid-column:1}
+ #wcd .space-scene-pending{min-height:220px}
+ #wcd .benefits article{flex-basis:82%;min-height:145px}
+ #wcd .vision-close p{font-size:13px}
+}
+
+/* Editorial product and interior gallery. */
+#wcd .plan:has(+ .space-gallery){padding-bottom:34px;border-bottom:0}
+#wcd .plan:has(+ .space-gallery) .section-heading{margin-bottom:0}
+#wcd .space-gallery{position:relative;background:#e8eff5;padding:39px 0 50px;isolation:isolate}
+#wcd .gallery-shell{max-width:1320px}
+#wcd .gallery-topline{display:flex;justify-content:space-between;align-items:center;color:#8b682d;font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase}
+#wcd .gallery-tabs{display:flex;gap:5px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #c5ccd2;margin:10px 0 20px}
+#wcd .gallery-tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:10px 18px 11px;min-height:44px;font:18px var(--serif);white-space:nowrap}
+#wcd .gallery-tabs button:first-child{padding-left:0}
+#wcd .gallery-tabs button[aria-selected="true"]{border-bottom-color:#a68045;color:var(--ink)}
+#wcd .gallery-tabs button:focus-visible,#wcd .gallery-scenes button:focus-visible{outline:3px solid #2868a3;outline-offset:2px}
+#wcd .gallery-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,340px);align-items:center;min-height:440px}
+#wcd .gallery-interior{position:relative;min-width:0;overflow:hidden;background:#d2d7d9;box-shadow:0 18px 35px rgba(48,52,93,.12)}
+#wcd .gallery-interior img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transition:opacity .2s ease}
+#wcd .gallery-interior figcaption{position:absolute;left:20px;bottom:19px;background:rgba(247,244,237,.95);color:var(--ink);padding:8px 13px;font-size:10px;font-weight:700;letter-spacing:1.6px}
+#wcd .gallery-product{position:relative;z-index:1;margin-left:-48px;background:var(--ivory);box-shadow:0 20px 42px rgba(35,42,70,.16);border-top:3px solid #b99860;padding:13px 15px 16px}
+#wcd .gallery-product-image{position:relative;height:172px;overflow:hidden;background:#244858}
+#wcd .gallery-product-image img{display:block;width:100%;height:100%;object-fit:contain;transition:opacity .2s ease}
+#wcd .gallery-product-image>span{position:absolute;z-index:1;left:8px;top:8px;background:rgba(247,244,237,.96);padding:4px 8px;color:#8b682d;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+#wcd .gallery-product-copy{padding:15px 6px 0}
+#wcd .gallery-product-copy .eyebrow{margin:0 0 7px;color:#8b682d;font-size:9px}
+#wcd .gallery-product-copy h3{font-size:27px;line-height:1.14}
+#wcd .gallery-product-copy>p:not(.eyebrow){color:var(--muted);font-size:12px;line-height:1.5;margin:9px 0 12px}
+#wcd .gallery-product-link{display:inline-flex;gap:10px;align-items:center;border-bottom:1px solid #a68045;font:16px var(--serif);padding-bottom:4px}
+#wcd .gallery-product-link:hover{color:#8b682d}
+#wcd .gallery-bottomline{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:44px;margin-top:13px}
+#wcd .gallery-scenes{display:flex;flex-wrap:wrap;gap:7px}
+#wcd .gallery-scenes button{border:1px solid #aeb9c1;background:transparent;color:var(--ink);padding:6px 13px;min-height:36px;font-size:11px}
+#wcd .gallery-scenes button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:white}
+#wcd .gallery-status{color:var(--muted);font-size:11px}
+#wcd .gallery-interior img.is-changing,#wcd .gallery-product-image img.is-changing{opacity:.4}
+@media(max-width:1000px){
+ #wcd .gallery-feature{display:block;min-height:0}
+ #wcd .gallery-interior img{height:auto;aspect-ratio:auto;object-fit:contain}
+ #wcd .gallery-product{width:min(85%,520px);margin:-50px 3% 0 auto;display:grid;grid-template-columns:36% minmax(0,1fr);gap:13px}
+ #wcd .gallery-product-image{height:100%;min-height:220px}
+}
+@media(max-width:700px){
+ #wcd .plan:has(+ .space-gallery){padding-bottom:26px}
+ #wcd .space-gallery{padding:26px 0 36px}
+ #wcd .gallery-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;margin-bottom:12px}
+ #wcd .gallery-tabs button{font-size:16px;padding:8px 13px}
+ #wcd .gallery-feature{display:block;min-height:0}
+ #wcd .gallery-interior img{height:auto;aspect-ratio:auto;object-fit:contain}
+ #wcd .gallery-product{width:93%;margin:-28px auto 0;padding:9px;display:grid;grid-template-columns:39% minmax(0,1fr);gap:10px}
+ #wcd .gallery-product-image{height:100%;min-height:190px}
+ #wcd .gallery-product-copy{padding:5px 2px 0}
+ #wcd .gallery-product-copy h3{font-size:21px}
+ #wcd .gallery-product-copy>p:not(.eyebrow){font-size:11px;margin:6px 0 9px}
+ #wcd .gallery-product-link{font-size:13px}
+ #wcd .gallery-bottomline{margin-top:10px}
+ #wcd .gallery-status{font-size:10px}
+}
+@media(max-width:400px){#wcd .gallery-product{grid-template-columns:35% minmax(0,1fr)}#wcd .gallery-product-image{min-height:180px}#wcd .gallery-product-copy h3{font-size:19px}}
+@media(prefers-reduced-motion:reduce){#wcd .gallery-interior img,#wcd .gallery-product-image img{transition:none}}
+#wcd .cta-ornament{box-shadow:0 9px 20px rgba(32,39,64,.2)}
+
+/* Keep the inspiration introduction balanced above its gallery. */
+#wcd .plan:has(+ .space-gallery){padding-top:42px;padding-bottom:58px}
+#wcd .plan:has(+ .space-gallery) .section-heading{align-items:center}
+#wcd .plan:has(+ .space-gallery) .section-heading>p{margin-top:0}
+
+/* The brandmark needs breathing room, including in the sticky header. */
+#wcd header{min-height:112px;height:auto;padding-top:12px;padding-bottom:12px}
+#wcd .brand img{width:126px;height:86px}
+
+@media(max-width:1000px){
+ #wcd header{min-height:100px;padding-top:11px;padding-bottom:11px}
+ #wcd .brand img{width:112px;height:76px}
+ #wcd .benefits article{border:1px solid #d4dee5;background:#edf3f7;padding:18px 20px}
+ #wcd .benefits article:nth-child(even){border-color:#e1d5be;background:#f3eee4}
+}
+@media(max-width:700px){
+ #wcd header{min-height:96px;padding:10px 6%}
+ #wcd .brand img{width:112px;height:74px}
+ #wcd header nav{top:100%}
+ #wcd .plan:has(+ .space-gallery){padding-top:36px;padding-bottom:42px}
+ #wcd .plan:has(+ .space-gallery) .section-heading>p{margin-top:16px}
+ #wcd .gallery-product{margin:20px auto 0}
+}

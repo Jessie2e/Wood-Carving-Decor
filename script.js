@@ -11,22 +11,13 @@
  const slides=[...root.querySelectorAll('.hero-slide')],slideButtons=[...root.querySelectorAll('[data-slide]')];
  function showSlide(index){slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',String(i!==index));if(slide.matches('a'))slide.tabIndex=i===index?0:-1});slideButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)))}
  slideButtons.forEach((button,i)=>button.addEventListener('click',()=>showSlide(i)));
- const corbelScene=root.querySelector('.guide-composite'),corbelButtons=[...root.querySelectorAll('[data-corbel-height]')],corbelStatus=root.querySelector('.guide-current-size');
- if(corbelScene&&corbelButtons.length){
-  const canvasHeight=Number(corbelScene.dataset.canvasHeight)||941;
-  const leftReference=Number(corbelScene.dataset.leftReferenceHeight)||221;
-  const rightReference=Number(corbelScene.dataset.rightReferenceHeight)||265;
-  const showCorbelSize=size=>{
-   corbelScene.style.setProperty('--left-height',`${leftReference*size/16/canvasHeight*100}%`);
-   corbelScene.style.setProperty('--right-height',`${rightReference*size/16/canvasHeight*100}%`);
-   corbelButtons.forEach(choice=>choice.setAttribute('aria-pressed',String(Number(choice.dataset.corbelHeight)===size)));
-   corbelStatus.textContent=`Showing two ${size}-inch lion corbels`;
-  };
-  corbelButtons.forEach(button=>button.addEventListener('click',()=>showCorbelSize(Number(button.dataset.corbelHeight))));
-  showCorbelSize(Number(corbelButtons.find(button=>button.getAttribute('aria-pressed')==='true')?.dataset.corbelHeight)||14);
- }
  const collection=root.querySelector('.collection-grid');if(collection){
   const controls=document.createElement('div');controls.className='collection-controls';controls.innerHTML='<button type="button" aria-label="Previous category">←</button><button type="button" aria-label="Next category">→</button>';
   collection.before(controls);controls.querySelectorAll('button').forEach((button,i)=>button.addEventListener('click',()=>collection.scrollBy({left:(i?1:-1)*collection.clientWidth*.82,behavior:'smooth'})));
+ }
+ const benefits=root.querySelector('.benefits');if(benefits){
+  const controls=document.createElement('div');controls.className='benefits-controls';controls.innerHTML='<button type="button" aria-label="Previous benefit">←</button><button type="button" aria-label="Next benefit">→</button>';
+  benefits.before(controls);
+  controls.querySelectorAll('button').forEach((button,i)=>button.addEventListener('click',()=>benefits.scrollBy({left:(i?1:-1)*(benefits.querySelector('article').getBoundingClientRect().width+16),behavior:'smooth'})));
  }
 })();
